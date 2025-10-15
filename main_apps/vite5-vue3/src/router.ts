@@ -1,0 +1,28 @@
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import Home from './views/home.vue'
+
+const routes: Array<RouteRecordRaw> = [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/subapp1/:page*',
+    name: 'subapp1',
+    component: () => import('./views/subapp1.vue'),
+  },
+  {
+    path: '/subapp2/:page*',
+    name: 'subapp2',
+    component: () => import('./views/subapp2.vue'),
+  },
+]
+
+const router = createRouter({
+  // 设置主应用基础路由为main-vite(用于后续部署)，则子应用基础路由(baseroute)为/main-vite/xxx
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes
+})
+
+export default router

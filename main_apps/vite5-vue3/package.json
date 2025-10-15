@@ -1,0 +1,24 @@
+{
+  "name": "vite5-vue3",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@micro-zoe/micro-app": "^1.0.0-rc.27",
+    "element-plus": "^2.11.4",
+    "vue": "^3.4.31",
+    "vue-router": "^4.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4",
+    "vue-tsc": "^2.0.24"
+  }
+}
