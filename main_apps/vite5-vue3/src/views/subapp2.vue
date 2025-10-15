@@ -22,7 +22,7 @@ export default {
   name: 'subapp2',
   data () {
     return {
-      url: `${config.app1}/child/subapp2/`,
+      url: `${config.app2}/subapp2/`,
       microAppData: {msg: '来自基座的数据'}
     }
   },

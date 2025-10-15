@@ -1,7 +1,10 @@
 <template>
   <div>
-    <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="主应用 - Vite + Vue@3.x" />
+        <micro-app
+      name='test'
+      url='http://localhost:3001/subapp1/'
+    ></micro-app>
   </div>
 </template>
 
