@@ -4,6 +4,7 @@
       name='subapp1'
       :url='url'
       :data='microAppData'
+      base='/subapp1/'
       @created='handleCreate'
       @beforemount='handleBeforeMount'
       @mounted='handleMount'
