@@ -3,7 +3,6 @@
     <micro-app
       name='subapp2'
       :url='url'
-      baseroute='/main-vite/subapp2'
       :data='microAppData'
       @created='handleCreate'
       @beforemount='handleBeforeMount'
@@ -11,6 +10,7 @@
       @unmount='handleUnmount'
       @error='handleError'
       @datachange='handleDataChange'
+      iframe
     ></micro-app>
   </div>
 </template>

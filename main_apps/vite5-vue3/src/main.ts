@@ -7,7 +7,9 @@ import router from './router'
 import microApp from '@micro-zoe/micro-app'
 
 // 初始化微前端
-microApp.start()
+microApp.start({
+    'disable-memory-router': true, // 禁用内存路由
+})
 
 const app = createApp(App)
 

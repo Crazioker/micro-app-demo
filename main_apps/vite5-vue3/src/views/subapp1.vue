@@ -10,6 +10,7 @@
       @unmount='handleUnmount'
       @error='handleError'
       @datachange='handleDataChange'
+      iframe
     ></micro-app>
   </div>
 </template>
@@ -17,12 +18,16 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
+
+import { EventCenterForMicroApp } from '@micro-zoe/micro-app'
 import config from '../config'
+
+// @ts-ignore 因为vite子应用关闭了沙箱，我们需要为子应用appname-vite创建EventCenterForMicroApp对象来实现数据通信
+window.eventCenterForAppNameSubapp1 = new EventCenterForMicroApp('subapp1')
 
 const url = ref(`${config.app1}/subapp1/`)
 const microAppData = ref({msg: '来自基座的数据'})
 
-console.log('app1 url:', url.value)
 
     function handleCreate (): void {
       console.log('subapp1 创建了')
@@ -37,7 +42,7 @@ console.log('app1 url:', url.value)
 
       setTimeout(() => {
         // @ts-ignore
-        this.microAppData = {msg: '来自基座的新数据'}
+        microAppData.value = {msg: '来自基座的新数据'}
       }, 2000)
     }
 

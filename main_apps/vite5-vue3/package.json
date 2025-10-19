@@ -9,8 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
     "@micro-zoe/micro-app": "^1.0.0-rc.27",
-    "element-plus": "^2.11.4",
+    "element-plus": "^2.11.5",
     "vue": "^3.4.31",
     "vue-router": "^4.6.2"
   },

@@ -1,30 +1,36 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <div id='public-links' @click="onRouteChange">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/page2">Page2</router-link>
+    </div>
+    <router-view></router-view>
   </div>
-  <HelloWorld msg="subapp1" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script lang="ts" setup>
+// 子应用内部跳转时，通知侧边栏改变菜单状态
+const onRouteChange = () => {
+  if (window.eventCenterForAppNameSubapp1) {
+    // 发送全局数据，通知侧边栏修改菜单展示
+    window.eventCenterForAppNameSubapp1.setGlobalData({ name: 'subapp1' })
+  }
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+// @ts-ignore
+const data = window.microApp.getData()
+
+console.log('subapp1 getData:', data)
+
+// @ts-ignore
+window.microApp.dispatch({ type: 'subapp1 dispatch' })
+</script>
+
+<style>
+#vite-app {
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
 </style>
