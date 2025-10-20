@@ -33,6 +33,16 @@
               <span>应用二</span>
             </el-menu-item>
           </el-sub-menu>
+        <!-- <el-sub-menu index="subapp">
+            <template #title>
+              <el-icon><Grid /></el-icon>
+              <span>外部应用</span>
+            </template>
+            <el-menu-item index="/cloud-doc">
+              <el-icon><Monitor /></el-icon>
+              <span>Cloud doc</span>
+            </el-menu-item>
+          </el-sub-menu> -->
         </el-menu>
       </el-aside>
       

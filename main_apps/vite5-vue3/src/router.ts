@@ -22,6 +22,11 @@ const routes: Array<RouteRecordRaw> = [
         name: 'subapp2',
         component: () => import('./views/subapp2.vue'),
       },
+      {
+        path: '/cloud-doc/:page*',
+        name: 'cloudDoc',
+        component: () => import('./views/cloudDoc.vue'),
+      },
     ]
  }
 ]
