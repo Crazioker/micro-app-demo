@@ -21,18 +21,12 @@ const routes: Array<RouteRecordRaw> = [
         path: '/subapp2/:page*',
         name: 'subapp2',
         component: () => import('./views/subapp2.vue'),
-      },
-      {
-        path: '/cloud-doc/:page*',
-        name: 'cloudDoc',
-        component: () => import('./views/cloudDoc.vue'),
-      },
+      }
     ]
  }
 ]
 
 const router = createRouter({
-  // 设置主应用基础路由为main-vite(用于后续部署)，则子应用基础路由(baseroute)为/main-vite/xxx
   history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })

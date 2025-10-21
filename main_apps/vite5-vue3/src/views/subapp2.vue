@@ -12,6 +12,7 @@
       @datachange='handleDataChange'
       iframe
     ></micro-app>
+    <!-- <iframe :src="url" style="width: 100%;height: 100vh"></iframe> -->
   </div>
 </template>
 
