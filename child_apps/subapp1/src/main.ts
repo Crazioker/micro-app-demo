@@ -83,3 +83,5 @@ if (window.__MICRO_APP_BASE_APPLICATION__) {
   mount()
 }
 
+// @ts-ignore
+console.log('subapp1变量a: ', window.a)

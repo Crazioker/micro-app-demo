@@ -17,3 +17,8 @@ const app = createApp(App)
 app.use(router)
 app.use(ElementPlus)
 app.mount('#app')
+
+// @ts-ignore
+window.a = 'base a'
+// @ts-ignore
+console.log('基座变量a: ', window.a)

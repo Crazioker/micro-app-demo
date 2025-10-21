@@ -17,12 +17,12 @@ const onRouteChange = () => {
   }
 }
 // @ts-ignore
-const data = window.microApp.getData()
+const data = window.microApp?.getData()
 
 console.log('subapp1 getData:', data)
 
 // @ts-ignore
-window.microApp.dispatch({ type: 'subapp1 dispatch' })
+window.microApp?.dispatch({ type: 'subapp1 dispatch' })
 </script>
 
 <style>
