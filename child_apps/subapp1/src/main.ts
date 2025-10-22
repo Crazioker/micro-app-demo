@@ -54,7 +54,7 @@ function mount () {
 
   app = createApp(App)
   app.use(router)
-  app.mount('#subapp1')
+  app.mount('#app')
 
   console.log('微应用subapp1渲染了')
 

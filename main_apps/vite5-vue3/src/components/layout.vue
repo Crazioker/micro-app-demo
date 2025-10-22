@@ -1,6 +1,5 @@
 <template>
   <div class="layout-container">
-    <!-- 侧边栏 - 使用element-plus菜单（增强版） -->
     <el-container class="layout-container">
       <el-aside width="220px" class="sidebar">
         <div class="sidebar-header">
